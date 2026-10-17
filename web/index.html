@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div id="app" class="hidden">
+  <div class="tablet">
+    <header>
+      <div class="brand"><span class="logo">&#9981;</span><span>PromptForge Fuel</span></div>
+      <div class="clock" id="clock"></div>
+      <button id="close">&#10005;</button>
+    </header>
+    <main>
+      <section class="left">
+        <div class="vhead"><div><small>VEHICLE</small><b id="model"></b></div><span class="plate" id="plate"></span></div>
+        <div class="stage">
+          <div class="floor"></div>
+          <img id="carimg" alt="">
+          <svg id="carfb" viewBox="0 0 224 80">
+            <defs><linearGradient id="cg" x1="0" x2="1"><stop offset="0" stop-color="#2b2b38"/><stop offset="1" stop-color="#14141b"/></linearGradient></defs>
+            <path d="M8 58 C10 46 30 42 52 38 L78 22 C86 17 100 15 118 15 L150 15 C166 15 178 24 188 34 L208 40 C216 43 218 50 216 58 Z" fill="url(#cg)" stroke="#00fff0" stroke-width="1.6"/>
+            <path d="M84 24 L112 18 L112 36 L66 36 Z M120 18 L148 18 C158 18 166 26 172 35 L120 36 Z" fill="#0b0b10" opacity=".8"/>
+            <circle cx="56" cy="58" r="12" fill="#0b0b10" stroke="#00fff0" stroke-width="1.6"/><circle cx="168" cy="58" r="12" fill="#0b0b10" stroke="#00fff0" stroke-width="1.6"/>
+          </svg>
+        </div>
+        <div class="gauge">
+          <svg viewBox="0 0 140 140">
+            <defs><linearGradient id="gg" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#00fff0"/><stop offset=".55" stop-color="#7a5cff"/><stop offset="1" stop-color="#ff2bd0"/></linearGradient></defs>
+            <circle class="bg" cx="70" cy="70" r="58"/>
+            <circle class="fg" id="arc" cx="70" cy="70" r="58"/>
+          </svg>
+          <div class="pct"><span id="pct">0%</span><small id="added">FUEL LEVEL</small></div>
+        </div>
+        <div class="chips">
+          <div><small>TEMP</small><b id="temp"></b></div>
+          <div><small>SPEED</small><b id="speed"></b></div>
+          <div><small>TANK</small><b id="tank"></b></div>
+        </div>
+      </section>
+      <section class="right">
+        <div class="trow"><h2 class="neon">FUEL TYPE</h2><span class="need" id="need"></span></div>
+        <div class="grid" id="grid"></div>
+        <footer>
+          <div><label>TOTAL PRICE</label><div class="total" id="total">$ 0</div></div>
+          <div id="paybox"><label>PAYMENT METHOD</label>
+            <div class="pay"><button data-m="cash" class="on">CASH<span id="cash"></span></button><button data-m="bank">BANK<span id="bank"></span></button></div>
+          </div>
+          <button id="buy"><i></i>PURCHASE</button>
+        </footer>
+      </section>
+    </main>
+  </div>
+</div>
+<script src="script.js"></script>
+</body>
+</html>
